@@ -1,0 +1,36 @@
+<script src=newgrounds.js></script>
+	<script>
+
+	"use strict";
+
+	var appID = "null";
+	var encryptionCipher = "null"; // AES-128 Base64
+	var debug = 0;
+
+	function setAppID(newID){
+		appID = newID;
+	}
+
+	function setCipher(newCipher){
+		encryptionCipher = newCipher;
+	}
+
+	function setDebug(newDebug){
+		debug = newDebug;
+	}
+
+	function startNewgrounds(){
+		Newgrounds.Init(appID, encryptionCipher, debug);
+	}
+
+	function unlockMedal(id)
+	{
+		Newgrounds.UnlockMedal(id);
+	}
+
+	function postScore(id, score)
+	{
+		Newgrounds.PostScore(id, parseInt(input_score.value));
+	}
+	
+	</script>
